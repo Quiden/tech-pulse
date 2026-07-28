@@ -1,0 +1,23 @@
+{
+  "name": "tech-pulse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack -c ./webpack.config.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "author": "Mikhail Kachalkov",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "esbuild": "^0.28.1",
+    "esbuild-loader": "^4.5.0",
+    "html-webpack-plugin": "^5.6.8",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2",
+    "webpack": "^5.109.0",
+    "webpack-cli": "^7.2.1"
+  }
+}
