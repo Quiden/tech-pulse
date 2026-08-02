@@ -2,15 +2,25 @@
   "name": "tech-pulse",
   "version": "1.0.0",
   "description": "",
+  "license": "ISC",
+  "author": "Mikhail Kachalkov",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --env port=3005",
     "build:prod": "webpack -c ./webpack.config.ts --env mode=production",
     "build:dev": "webpack -c ./webpack.config.ts --env mode=development",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
-  "author": "Mikhail Kachalkov",
-  "license": "ISC",
+  "dependencies": {
+    "@tanstack/react-router": "^1.170.18",
+    "@tanstack/react-router-devtools": "^1.167.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
   "devDependencies": {
     "@tanstack/router-plugin": "^1.168.23",
     "@types/node": "^26.1.1",
@@ -21,17 +31,13 @@
     "esbuild-loader": "^4.5.0",
     "html-webpack-plugin": "^5.6.8",
     "mini-css-extract-plugin": "^2.10.2",
+    "oxfmt": "^0.61.0",
+    "oxlint": "^1.76.0",
     "style-loader": "^4.0.0",
     "tsx": "^4.23.1",
     "typescript": "^7.0.2",
     "webpack": "^5.109.0",
     "webpack-cli": "^7.2.1",
     "webpack-dev-server": "^6.0.0"
-  },
-  "dependencies": {
-    "@tanstack/react-router": "^1.170.18",
-    "@tanstack/react-router-devtools": "^1.167.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
   }
 }

@@ -1,10 +1,12 @@
-import {Counter} from "../../common/counter/counter";
+import { Counter } from "../../common/counter/counter";
 
 const AboutPage = () => {
-    return (<div>
-        <h1>About Page</h1>
-        <Counter />
-    </div>)
-}
+  return (
+    <div>
+      <h1>About Page</h1>
+      <Counter />
+    </div>
+  );
+};
 
 export default AboutPage;
