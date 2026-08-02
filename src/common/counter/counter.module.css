@@ -1,0 +1,9 @@
+button {
+    color: green;
+    width: 100px;
+}
+
+.counter__button {
+    color: red;
+    width: 100px;
+}

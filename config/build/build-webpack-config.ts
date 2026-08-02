@@ -14,10 +14,11 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
         output: {
             filename: "[name].[contenthash].js",
             path: paths.build,
+            publicPath: "/",
             clean: true,
         },
         module: {
-            rules: buildLoaders(),
+            rules: buildLoaders(isDev),
         },
         resolve: buildResolvers(),
         plugins: buildPlugins(paths.html),

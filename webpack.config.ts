@@ -4,14 +4,16 @@ import {buildWebpackConfig} from "./config/build/build-webpack-config";
 import {BuildEnv} from "./config/build/types/config";
 
 export default (env: BuildEnv): webpack.Configuration => {
+    const mode = env.mode ?? "development";
+
     return buildWebpackConfig({
-        mode: env.mode || 'development',
+        mode,
         paths: {
-            entry: path.resolve(__dirname, "src", "index.ts"),
+            entry: path.resolve(__dirname, "src", "index.tsx"),
             build: path.resolve(__dirname, "build"),
             html: path.resolve(__dirname, "public", "index.html"),
         },
-        isDev: env.mode === 'development',
-        port: env.port || 3000,
+        isDev: mode === 'development',
+        port: env.port ?? 3000,
     });
 }
