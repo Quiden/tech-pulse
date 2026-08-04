@@ -1,0 +1,13 @@
+@import "../../common/styles/reset.css";
+@import "../../common/styles/variables.css";
+@import "../../common/styles/themes/dark.css";
+@import "../../common/styles/themes/light.css";
+
+.app {
+  font-family: var(--font-family-main);
+
+  background-color: var(--color-background);
+  color: var(--color-primary);
+
+  min-height: 100vh;
+}

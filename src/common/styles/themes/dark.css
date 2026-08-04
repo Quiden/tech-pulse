@@ -1,4 +1,6 @@
 :root[data-theme="dark"] {
-  --color-primary: #fff;
-  --color-secondary: #fff;
+  --color-background: #0b1020;
+
+  --color-primary: #f1f5f9;
+  --color-secondary: #a8b3c7;
 }

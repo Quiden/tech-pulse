@@ -1,4 +1,4 @@
-import { Counter } from "../../common/counter/counter";
+import { Counter } from "@common/ui/counter/counter";
 
 const HomePage = () => {
   return (

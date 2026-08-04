@@ -1,4 +1,6 @@
 :root[data-theme="light"] {
-  --color-primary: #000;
-  --color-secondary: #000;
+  --color-background: #f6f8fc;
+
+  --color-primary: #111827;
+  --color-secondary: #5b6475;
 }
