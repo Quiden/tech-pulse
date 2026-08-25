@@ -1,0 +1,15 @@
+.navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--color-background-inverted);
+}
+
+.navbar__links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto;
+}

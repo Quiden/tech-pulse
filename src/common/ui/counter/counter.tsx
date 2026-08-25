@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import * as classes from "./counter.module.css";
+import classes from "./counter.module.css";
 
 export const Counter: FC = () => {
   const [count, setCount] = useState(0);

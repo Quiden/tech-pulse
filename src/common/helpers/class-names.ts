@@ -1,6 +1,10 @@
 type ClassNameConditions = Record<string, boolean | string>;
 
-const parseValue = (value: string | ClassNameConditions) => {
+const parseValue = (value: string | ClassNameConditions | undefined) => {
+  if (!value) {
+    return "";
+  }
+
   if (typeof value === "string") {
     return value;
   }
@@ -15,6 +19,6 @@ const parseValue = (value: string | ClassNameConditions) => {
     .join(" ");
 };
 
-export const classNames = (...classNames: (string | ClassNameConditions)[]) => {
+export const classNames = (...classNames: (string | ClassNameConditions | undefined)[]) => {
   return classNames.map(parseValue).filter(Boolean).join(" ");
 };

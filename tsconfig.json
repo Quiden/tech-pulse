@@ -7,9 +7,11 @@
     "target": "esnext",
     "jsx": "react-jsx",
     "allowJs": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
+      "@public/*": ["./public/*"],
       "@common/*": ["./src/common/*"],
       "@modules/*": ["./src/modules/*"],
       "@pages/*": ["./src/pages/*"]

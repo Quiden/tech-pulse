@@ -1,12 +1,13 @@
 import { Counter } from "@common/ui/counter/counter";
+import { useTranslation } from "react-i18next";
 
-const HomePage = () => {
+export const HomePage = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>{t("title")}</h1>
       <Counter />
     </div>
   );
 };
-
-export default HomePage;

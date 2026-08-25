@@ -4,5 +4,9 @@ export const buildDevServer = (port: number): webpack.Configuration["devServer"]
   return {
     port,
     historyApiFallback: true,
+    hot: true,
+    client: {
+      overlay: true,
+    },
   };
 };
