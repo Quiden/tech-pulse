@@ -1,6 +1,7 @@
-import type { FC } from "react";
-import { useTranslation } from "react-i18next";
-import { LANGUAGES } from "@common/config/i18n/languages";
+import type { FC } from 'react';
+
+import { LANGUAGES } from '@common/config/i18n/languages';
+import { useTranslation } from 'react-i18next';
 
 export interface LangSwitcherProps {
   className?: string;
@@ -13,5 +14,9 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({ className }) => {
     i18n.changeLanguage(i18n.language === LANGUAGES.EN ? LANGUAGES.RU : LANGUAGES.EN);
   };
 
-  return <button onClick={switchLanguage}>{t("language")}</button>;
+  return (
+    <button className={className} onClick={switchLanguage}>
+      {t('language')}
+    </button>
+  );
 };

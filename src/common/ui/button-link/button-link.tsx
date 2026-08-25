@@ -1,21 +1,18 @@
-import type { FC } from "react";
-import { Link, LinkProps } from "@tanstack/react-router";
-import { classNames } from "@common/helpers/class-names";
-import classes from "./button-link.module.css";
+import type { FC } from 'react';
 
-type ButtonLinkTheme = "primary" | "secondary";
+import { classNames } from '@common/helpers/class-names';
+import { Link, LinkProps } from '@tanstack/react-router';
+
+import classes from './button-link.module.css';
+
+type ButtonLinkTheme = 'primary' | 'secondary';
 
 export interface ButtonLinkProps extends LinkProps {
   className?: string;
   theme?: ButtonLinkTheme;
 }
 
-export const ButtonLink: FC<ButtonLinkProps> = ({
-  className,
-  theme = "primary",
-  children,
-  ...props
-}) => {
+export const ButtonLink: FC<ButtonLinkProps> = ({ className, theme = 'primary', children, ...props }) => {
   return (
     <Link className={classNames(classes.link, classes[theme], className)} {...props}>
       {children}

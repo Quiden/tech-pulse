@@ -1,13 +1,12 @@
-import { Theme, ThemeContext, ThemeContextType } from "./theme-context";
-import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from "react";
-import LocalStorageService, {
-  LocalStorageServiceKeys,
-} from "@common/services/local-storage-service";
+import LocalStorageService, { LocalStorageServiceKeys } from '@common/services/local-storage-service';
+import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from 'react';
 
-const DEFAULT_THEME: Theme = "light";
+import { Theme, ThemeContext, ThemeContextType } from './theme-context';
+
+const DEFAULT_THEME: Theme = 'light';
 
 const isTheme = (value: unknown): value is Theme => {
-  return value === "light" || value === "dark";
+  return value === 'light' || value === 'dark';
 };
 
 const getInitialTheme = (): Theme => {
@@ -24,7 +23,7 @@ export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(getInitialTheme());
 
   const switchTheme = useCallback(() => {
-    setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
+    setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'));
   }, []);
 
   useEffect(() => {

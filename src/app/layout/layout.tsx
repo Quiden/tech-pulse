@@ -1,14 +1,13 @@
-import { FC, Suspense } from "react";
-import { Link, Outlet } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import { classNames } from "@common/helpers/class-names";
-import { useTheme } from "@modules/theme";
-import { Navbar } from "@modules/navbar";
-import { Sidebar } from "@modules/sidebar";
+import { classNames } from '@common/helpers/class-names';
+import { Navbar } from '@modules/navbar';
+import { Sidebar } from '@modules/sidebar';
+import { Outlet } from '@tanstack/react-router';
+import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
+import { FC, Suspense } from 'react';
 
 export const Layout: FC = () => {
   return (
-    <div className={classNames("app")}>
+    <div className={classNames('app')}>
       <Suspense fallback={null}>
         <Navbar />
 
