@@ -1,9 +1,13 @@
 export default interface Resources {
   about: {
-    title: "About Page";
+    title: 'About Page';
   };
   translation: {
-    language: "EN";
-    title: "Home Page";
+    language: 'EN';
+    navbar: {
+      about: 'About';
+      home: 'Home';
+    };
+    title: 'Home Page';
   };
 }

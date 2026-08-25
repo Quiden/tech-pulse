@@ -1,4 +1,8 @@
 {
   "title": "Home Page",
-  "language": "EN"
+  "language": "EN",
+  "navbar": {
+    "home": "Home",
+    "about": "About"
+  }
 }

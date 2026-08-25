@@ -3,7 +3,7 @@ import SvgPanelLeftOpen from '@common/assets/icons/panel-left-open.svg';
 import { classNames } from '@common/helpers/class-names';
 import { useToggle } from '@common/helpers/use-toggle';
 import { LangSwitcher } from '@modules/sidebar/ui/lang-switcher/lang-switcher';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 
 import classes from './sidebar.module.css';
 

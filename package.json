@@ -16,6 +16,8 @@
     "lint:fix": "oxlint --fix",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
+    "stylelint": "npx stylelint \"**/*.css\"",
+    "stylelint:fix": "npx stylelint \"**/*.css\" --fix",
     "routes:generate": "tsr generate",
     "routes:watch": "tsr watch",
     "i18next:interface": "i18next-resources-for-ts interface -i public/locales/en -o src/common/config/i18n/resources.d.ts"
@@ -51,6 +53,8 @@
     "oxlint": "^1.76.0",
     "react-refresh": "^0.18.0",
     "style-loader": "^4.0.0",
+    "stylelint": "^17.14.1",
+    "stylelint-config-standard": "^40.0.0",
     "swc-loader": "^0.2.7",
     "tsx": "^4.23.1",
     "typescript": "^7.0.2",

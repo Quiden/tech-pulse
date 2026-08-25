@@ -1,4 +1,8 @@
 {
   "title": "Главная страница",
-  "language": "RU"
+  "language": "RU",
+  "navbar": {
+    "home": "Главная",
+    "about": "О нас"
+  }
 }

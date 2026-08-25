@@ -16,11 +16,11 @@ export const Counter: FC = () => {
   return (
     <div>
       <button className={classes.counter__button} onClick={handleDecrement}>
-        -
+        {'-'}
       </button>
       <span>{count}</span>
       <button className={classes.counter__button} onClick={handleIncrement}>
-        +
+        {'+'}
       </button>
     </div>
   );

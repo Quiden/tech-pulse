@@ -1,7 +1,6 @@
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   --color-background: #0b1020;
   --color-background-inverted: #f6f8fc;
-
   --color-primary: #f1f5f9;
   --color-secondary: #a8b3c7;
   --color-primary-inverted: #111827;
