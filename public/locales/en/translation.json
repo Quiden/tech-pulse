@@ -4,5 +4,8 @@
   "navbar": {
     "home": "Home",
     "about": "About"
-  }
+  },
+  "not-found": "Page not found",
+  "error": "Something went wrong",
+  "reload-page": "Reload page"
 }
