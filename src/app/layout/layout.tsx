@@ -1,5 +1,5 @@
 import { classNames } from '@common/helpers/class-names';
-import { Navbar } from '@modules/navbar';
+import { Header } from '@modules/header';
 import { PageLoader } from '@modules/page-loader';
 import { Sidebar } from '@modules/sidebar';
 import { Outlet } from '@tanstack/react-router';
@@ -9,7 +9,7 @@ import { FC, Suspense } from 'react';
 export const Layout: FC = () => {
   return (
     <div className={classNames('app')}>
-      <Navbar />
+      <Header />
 
       <div className="content-page">
         <Sidebar />

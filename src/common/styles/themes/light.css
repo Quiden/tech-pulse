@@ -5,4 +5,5 @@
   --color-secondary: #5b6475;
   --color-primary-inverted: #f1f5f9;
   --color-secondary-inverted: #a8b3c7;
+  --color-divider: color-mix(in srgb, #201e1d 40%, transparent);
 }

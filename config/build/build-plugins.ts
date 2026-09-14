@@ -3,6 +3,7 @@ import { tanstackRouter } from '@tanstack/router-plugin/webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 import { BuildPaths } from './types/config';
 
@@ -22,6 +23,9 @@ export const buildPlugins = (htmlPath: BuildPaths['html'], isDev: boolean): webp
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
+    }),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
     }),
     ...(isDev ? [new ReactRefreshWebpackPlugin({ overlay: false })] : []),
   ];

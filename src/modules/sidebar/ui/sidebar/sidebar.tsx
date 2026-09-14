@@ -2,6 +2,7 @@ import SvgPanelLeftClose from '@common/assets/icons/panel-left-close.svg';
 import SvgPanelLeftOpen from '@common/assets/icons/panel-left-open.svg';
 import { classNames } from '@common/helpers/class-names';
 import { useToggle } from '@common/helpers/use-toggle';
+import { Button } from '@common/ui/button';
 import { LangSwitcher } from '@modules/sidebar/ui/lang-switcher/lang-switcher';
 import { FC } from 'react';
 
@@ -15,11 +16,11 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
   const [isCollapsed, onToggle] = useToggle(false);
 
   return (
-    <div className={classNames(classes.sidebar, { [classes.collapsed]: isCollapsed }, className)}>
+    <div className={classNames(classes.sidebar, { [classes.collapsed]: isCollapsed }, className)} data-testid="sidebar">
       <div className={classes.actions}>
-        <button style={{ width: '40px', height: '40px' }} type="button" onClick={onToggle}>
+        <Button type="button" onClick={onToggle} data-testid="sidebar-toggle">
           {isCollapsed ? <SvgPanelLeftOpen /> : <SvgPanelLeftClose />}
-        </button>
+        </Button>
 
         <LangSwitcher />
       </div>

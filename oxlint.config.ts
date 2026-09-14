@@ -11,4 +11,5 @@ export default defineConfig({
     'react/jsx-no-literals': 'error',
     'sort-imports': 'off',
   },
+  ignorePatterns: ['*.test.tsx'],
 });

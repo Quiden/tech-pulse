@@ -2,6 +2,7 @@ import type { ErrorComponentProps } from '@tanstack/react-router';
 import type { FC } from 'react';
 
 import { classNames } from '@common/helpers/class-names';
+import { Button } from '@common/ui/button';
 import { useTranslation } from 'react-i18next';
 
 import classes from './page-error.module.css';
@@ -24,7 +25,7 @@ export const PageError: FC<PageErrorProps> = ({ className, reset }) => {
   return (
     <div className={classNames(classes['page-error'], className)}>
       <h2>{t('error')}</h2>
-      <button onClick={handleReset}>{t('reload-page')}</button>
+      <Button onClick={handleReset}>{t('reload-page')}</Button>
     </div>
   );
 };
